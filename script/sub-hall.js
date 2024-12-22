@@ -252,7 +252,7 @@ fetch('header.html')
           .forEach((a) => {
             a.addEventListener('click', function () {
               localStorage.setItem('detailId', JSON.stringify(this.dataset.id));
-              location.href = 'sub-reservation/sub-reservation.html';
+              location.href = 'sub-reservation.html';
             });
           });
       }
@@ -343,9 +343,9 @@ const hallLocationTapSwiper = new Swiper('.hallLocationTapSwiper', {
       hallLocationTapContent.forEach((a, i) => {
         a.setAttribute(
           'src',
-          `img/sub-hall-img/${hallLocationTapMenu[this.realIndex].dataset.name}0${
-            i + 1
-          }.gif`
+          `img/sub-hall-img/${
+            hallLocationTapMenu[this.realIndex].dataset.name
+          }0${i + 1}.gif`
         );
       });
 
